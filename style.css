@@ -1,7 +1,92 @@
-p {
-  color: red;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-body {
-  background-color: #7fffd4
+h2 {
+    text-align: center;
+    color: #666;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+.terms {
+    margin-top: 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.terms input {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.calculator-container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.buttons-grid {
+    margin: 15px 0;
+}
+
+.buttons-grid button {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }
