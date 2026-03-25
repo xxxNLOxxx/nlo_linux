@@ -30,4 +30,15 @@ if (is_dir("www")) {
     rmdir("www");
     echo "Папка test создана, переименована в www и удалена<br>";
 }
+
+$array = ["images", "documents", "logs", "backups"];
+if (!is_dir("test")) mkdir("test");
+
+foreach ($array as $sub_name) {
+    $new_dir = "test/" . $sub_name;
+    if (!is_dir($new_dir)) {
+        mkdir($new_dir);
+        echo "Создана папка: $new_dir<br>";
+    }
+}
 ?>
