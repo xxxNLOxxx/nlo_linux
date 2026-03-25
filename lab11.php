@@ -41,4 +41,14 @@ foreach ($array as $sub_name) {
         echo "Создана папка: $new_dir<br>";
     }
 }
+
+echo "Список JPG файлов:<br>";
+$jpg_files = glob("*.jpg");
+if (empty($jpg_files)) {
+    echo "JPG файлы не найдены<br>";
+} else {
+    foreach ($jpg_files as $filename) {
+        echo $filename . "<br>";
+    }
+}
 ?>
