@@ -22,4 +22,12 @@ if (file_exists("folder/world.txt")) {
 }
 echo "world.txt: " . (file_exists("folder/world.txt") ? "Существует" : "Не существует") . "<br>";
 echo "mir.txt: " . (file_exists("folder/mir.txt") ? "Существует" : "Не существует") . "<br>";
+
+// Часть 2
+if (!is_dir("test")) mkdir("test");
+rename("test", "www");
+if (is_dir("www")) {
+    rmdir("www");
+    echo "Папка test создана, переименована в www и удалена<br>";
+}
 ?>
