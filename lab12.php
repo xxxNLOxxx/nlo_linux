@@ -45,5 +45,16 @@ echo date('l', mktime(0, 0, 0, 2, 2, 2000)) . "<br>";
 $week = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 echo "Сегодня: " . $week[date('w')] . "<br>";
 echo "12.06.2016 был: " . $week[date('w', mktime(0, 0, 0, 6, 12, 2016))] . "<br>";
-// Замени числа на свою дату рождения: день, месяц, год
 echo "Мой день рождения был в: " . $week[date('w', mktime(0, 0, 0, 8, 21, 2007))] . "<br>";
+
+echo '<form method="GET">
+    <input type="date" name="date1">
+    <input type="date" name="date2">
+    <input type="submit">
+</form>';
+
+if (isset($_GET['date1'], $_GET['date2'])) {
+    $d1 = strtotime($_GET['date1']);
+    $d2 = strtotime($_GET['date2']);
+    echo "Наибольшая дата: " . ($d1 > $d2 ? $_GET['date1'] : $_GET['date2']) . "<br>";
+}
