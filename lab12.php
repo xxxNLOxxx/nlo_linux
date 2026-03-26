@@ -61,3 +61,9 @@ if (isset($_GET['date1'], $_GET['date2'])) {
 
 $oldDate = '2025-12-31';
 echo date('d-m-Y', strtotime($oldDate)) . "<br>";
+
+$date = date_create('2000-02-03');
+date_modify($date, '+2 days +1 month +3 days +1 year');
+echo "После прибавления: " . date_format($date, 'Y.m.d') . "<br>";
+date_modify($date, '-3 days');
+echo "После вычитания: " . date_format($date, 'Y.m.d') . "<br>";
