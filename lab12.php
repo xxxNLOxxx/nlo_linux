@@ -39,3 +39,5 @@ echo time() - mktime(8, 5, 59, 10, 2, 1990) . " секунд прошло<br>";
 echo date('Y.m.d H:i:s') . "<br>";
 
 echo date('Y.09.01') . "<br>";
+
+echo date('l', mktime(0, 0, 0, 2, 2, 2000)) . "<br>";
