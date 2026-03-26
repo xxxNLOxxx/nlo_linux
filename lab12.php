@@ -58,3 +58,6 @@ if (isset($_GET['date1'], $_GET['date2'])) {
     $d2 = strtotime($_GET['date2']);
     echo "Наибольшая дата: " . ($d1 > $d2 ? $_GET['date1'] : $_GET['date2']) . "<br>";
 }
+
+$oldDate = '2025-12-31';
+echo date('d-m-Y', strtotime($oldDate)) . "<br>";
