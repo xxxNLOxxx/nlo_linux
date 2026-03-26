@@ -67,3 +67,7 @@ date_modify($date, '+2 days +1 month +3 days +1 year');
 echo "После прибавления: " . date_format($date, 'Y.m.d') . "<br>";
 date_modify($date, '-3 days');
 echo "После вычитания: " . date_format($date, 'Y.m.d') . "<br>";
+
+$newYear = mktime(0, 0, 0, 1, 1, date('Y') + 1);
+$daysLeft = floor(($newYear - time()) / 86400);
+echo "До Нового Года осталось: $daysLeft дней";
