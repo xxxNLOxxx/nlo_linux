@@ -31,3 +31,5 @@ try {
 } catch (Exception $e) {
     echo "Исключение 1.3: " . $e->getMessage() . "<br>";
 }
+
+echo mktime(10, 25, 0, 3, 15, 2025) . "<br>";
