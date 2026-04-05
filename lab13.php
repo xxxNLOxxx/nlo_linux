@@ -20,14 +20,19 @@ public function GetAge() {
 return $this->age;    
     }
 
-public function GetSalary() {
+public function GetSalary($otherWorker = null) {
+if ($otherWorker === null) {
 return $this->salary;
     }
+
+return $this->salary + $otherWorker->salary;
+    }
 }
+
 
 $firstWorker = new BalukhWorker("Vasya", 22, 180000);
 $secondWorker = new BalukhWorker("Katya", 19, 60000);
 
-echo $firstWorker->GetSalary() . " - зарплата первого работника";
-
+echo $firstWorker->GetSalary() . " - зарплата первого работника <br>";
+echo $firstWorker->GetSalary($secondWorker) . " - сумма зарплат работников <br>";
 
