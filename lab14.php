@@ -2,7 +2,11 @@
 class Page
 {
     private string $name = 'page';
-    private string $template = '<div><p>It is a default page</p></div>';
+     private string $template = '
+        <div style="background: #fdf5e6; padding: 20px; border-radius: 10px;">
+            <h1>Добро пожаловать в Мир Путешествий!</h1>
+            <p>Сейчас можно спланировать свою поездку, куда хочешь? Переходи в блог =) </p>
+        </div>';
 
     public function render(): void
     {
@@ -29,5 +33,25 @@ class BlogPage extends Page
     {
         echo $this->template;
     }
+}
+
+$linkPage = "lab14.php?page=page"; 
+$linkBlog = "lab14.php?page=blog"; 
+
+echo "<a href='$linkPage'>Открыть страницу Page</a><br>";
+echo "<a href='$linkBlog'>Открыть страницу Blog</a><br><br>";
+
+if (isset($_GET['page'])) {
+    
+    if ($_GET['page'] === 'blog') {
+        $page = new BlogPage();
+        $page->render();
+    }
+    elseif ($_GET['page'] === 'page') {
+        $page = new Page();
+        $page->render();    
+    }
+} else {
+echo "Нужно выбрать с помощью ссылок выше."; 
 }
 ?>
