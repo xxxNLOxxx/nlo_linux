@@ -1,8 +1,8 @@
 <?php
 abstract class Figure {
-    private $square;
-    private $color;
-    private $count_sides;
+    protected $square;
+    protected $color;
+    protected $count_sides;
 
     public function getSquare() { 		
     return $this->square; 		
@@ -25,16 +25,20 @@ abstract class Figure {
 	    $this->count_sides = $count_sides; 		
     } 		 		
 
-    abstract public function infoAbout($value); 
+    abstract public function infoAbout(); 
 }
 
-public class Rectangle {
+interface Area {
+    public function getArea();
 }
 
-public class Triangle {
+public class Rectangle extends Figure implements Area {
 }
 
-public class Square {
+public class Triangle extends Figure implements Area {
+}
+
+public class Square extends Figure implements Area {
 }
 
 
