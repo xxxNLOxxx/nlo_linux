@@ -33,12 +33,27 @@ interface Area {
 }
 
 public class Rectangle extends Figure implements Area {
+private $a;
+private $b;
+
+public function getArea() {}
+public function infoAbout() {}
 }
 
 public class Triangle extends Figure implements Area {
+private $a;
+private $b;
+private $c;
+
+public function getArea() {}
+public function infoAbout() {}
 }
 
 public class Square extends Figure implements Area {
+private $a;
+
+public function getArea() {}
+public function infoAbout() {}
 }
 
 
