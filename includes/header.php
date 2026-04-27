@@ -1,4 +1,5 @@
 <header>
+<link rel="icon" href="/assets/images/logo.jpeg" type="image/jpeg">
     <nav>
         <ul>
              <?php foreach ($menuItems as $title => $url): ?>
@@ -8,7 +9,6 @@
                     </a>
                 </li>
             <?php endforeach; ?>
-
         </ul>
     </nav>
 </header>
