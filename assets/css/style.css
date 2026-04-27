@@ -3,3 +3,16 @@ nav a.active {
     color: #f00;
 }
 
+@media (max-width: 600px) {
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
